@@ -1,14 +1,31 @@
 title: Yu Zhou
+description: Ph.D. student in Electrical Engineering at the University of Notre Dame
 logo: /IMG_3813.JPG
-remote_theme: pages-themes/minimal@v0.2.0
+favicon: true
+
+remote_theme: vaibhavvikas/jekyll-theme-minimalistic
+
 plugins:
-  - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jemoji
 
-header_pages:
-  - index.md
-  - cv.md
-  - photography.md
-
-# Use this line to include the custom header
+# Optional: Custom includes like header or footer
 include:
   - _includes/header.html
+
+platforms:
+  - name: GitHub
+    icon: <i class="fa-brands fa-github"></i>
+    link: https://github.com/Barryzhouyu
+  - name: LinkedIn
+    icon: <i class="fa-brands fa-linkedin"></i>
+    link: https://www.linkedin.com/in/yu-zhou-5a54b121a/
+
+navigation:
+  - name: About
+    link: ./index.md
+  - name: CV
+    link: ./cv.md
+  - name: Photography
+    link: ./photography.md
