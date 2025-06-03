@@ -3,6 +3,8 @@ layout: default
 title: CV
 ---
 
-## Curriculum Vitae
+## 📄 Curriculum Vitae
 
-<iframe src="/Yu_s_Resume.pdf" width="100%" height="800px" style="border: none;"></iframe>
+You can download my CV here:
+
+👉 [**Download Yu_s_Resume.pdf**](/Yu_s_Resume.pdf){:download}
