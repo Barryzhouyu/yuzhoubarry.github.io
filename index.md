@@ -22,9 +22,7 @@ Prior to Notre Dame, I earned my **M.S. in Mechanical Engineering and Materials 
 ---
 ## Publications
 
-1. **Yu Zhou**, Ruochu Yang, Mengxue Hou,  
-   “Flow Field Estimation in Underwater Vehicle Navigation using Sporadic Image Observations,”  
-   _International Conference on Ubiquitous Robots (UR)_, 2025.
+1. **Yu Zhou**, Ruochu Yang, Mengxue Hou, “Flow Field Estimation in Underwater Vehicle Navigation using Sporadic Image Observations,” _International Conference on Ubiquitous Robots (UR)_, 2025.
 
 2. Likai Pei, **Yu Zhou**, Xingtian Wang, Xueji Zhao, Wanxin Huang, Boyang Cheng,  
    Halid Mulaosmanovic, Stefan Duenkel, Dominik Kleimaier, Sven Beyer, Kai Ni,  
