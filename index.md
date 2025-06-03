@@ -17,13 +17,13 @@ Prior to Notre Dame, I earned my **M.S. in Mechanical Engineering and Materials 
 
 ## Research Interests
 
-I work on building robust, interpretable robot perception systems using **3D Gaussian Splatting**. My research emphasizes:
+My research includes:
 
 - **Computer Vision**
 - **Machine/Robot Learning**
 - **Marine Robotics**
 
-I'm especially interested in applying these techniques in complex domains like underwater environments.
+I work on building robust, interpretable robot perception systems using **3D Gaussian Splatting**. I'm especially interested in applying these techniques in complex domains like underwater environments.
 
 ---
 
