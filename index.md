@@ -7,12 +7,12 @@ title: Yu Zhou
 <tr>
 <td style="width:180px; vertical-align: top;">
 
-<img src="images/profile.jpg" width="160" alt="Yu Zhou" style="border-radius: 10px;"><br>
+<img src="IMG_9336.jpg" width="160" alt="Yu Zhou" style="border-radius: 10px;"><br>
 <b>Yu Zhou</b><br>
 Ph.D. Student, Electrical Engineering<br>
 University of Notre Dame<br>
 📍 Notre Dame, IN, USA<br>
-📧 <a href="mailto:your.email@nd.edu">your.email@nd.edu</a><br>
+📧 <a href="mailto:your.email@nd.edu">yzhou27@nd.edu</a><br>
 🔗 <a href="https://scholar.google.com/">Google Scholar</a><br>
 
 </td>
