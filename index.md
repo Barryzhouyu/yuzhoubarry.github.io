@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Yu Zhou
+title:
 ---
 
 <img src="IMG_9336.jpg" width="160" style="float: left; margin-right: 20px; border-radius: 8px;"/>
