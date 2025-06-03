@@ -3,8 +3,6 @@ layout: default
 title:
 ---
 
-<img src="IMG_9336.jpg" width="160" style="float: left; margin-right: 20px; border-radius: 8px;"/>
-
 ## About me
 
 My name is **Yu Zhou**, and I am a Ph.D. student in **Electrical Engineering** at the **University of Notre Dame**, advised by [Prof. Mengxue Hou](https://engineering.nd.edu/faculty/mengxue-hou/) in the ND ROAR lab. My research lies at the intersection of **robotics**, **computer vision**, and **uncertainty-aware perception**.
