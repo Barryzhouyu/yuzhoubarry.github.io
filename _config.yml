@@ -1,1 +1,8 @@
 theme: minima
+title: Yu Zhou
+author: Yu Zhou
+
+header_pages:
+  - index.md
+  - cv.md
+  - photography.md
