@@ -1,5 +1,4 @@
 title: Yu Zhou
-description: Ph.D. student in Electrical Engineering at the University of Notre Dame
 logo: /IMG_3813.JPG
 favicon: true
 
@@ -10,7 +9,6 @@ plugins:
   - jekyll-seo-tag
   - jemoji
 
-# Optional: Custom includes like header or footer
 include:
   - _includes/header.html
 
