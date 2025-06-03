@@ -21,8 +21,6 @@ platforms:
     link: https://www.linkedin.com/in/yu-zhou-5a54b121a/
 
 navigation:
-  - name: About
-    link: ./#index
   - name: CV
     link: /cv.md
   - name: Photography
