@@ -24,8 +24,4 @@ Prior to Notre Dame, I earned my **M.S. in Mechanical Engineering and Materials 
 
 1. **Yu Zhou**, Ruochu Yang, Mengxue Hou, “Flow Field Estimation in Underwater Vehicle Navigation using Sporadic Image Observations,” _International Conference on Ubiquitous Robots (UR)_, 2025.
 
-2. Likai Pei, **Yu Zhou**, Xingtian Wang, Xueji Zhao, Wanxin Huang, Boyang Cheng,  
-   Halid Mulaosmanovic, Stefan Duenkel, Dominik Kleimaier, Sven Beyer, Kai Ni,  
-   Mengxue Hou, Michael Niemier, Ningyuan Cao,  
-   “Towards Uncertainty-aware Robotic Perception via Mixed-signal BNN Engine Leveraging Probabilistic Quantum Tunneling,”  
-   _Design Automation Conference (DAC)_, 2025.
+2. Likai Pei, **Yu Zhou**, Xingtian Wang, Xueji Zhao, Wanxin Huang, Boyang Cheng, Halid Mulaosmanovic, Stefan Duenkel, Dominik Kleimaier, Sven Beyer, Kai Ni, Mengxue Hou, Michael Niemier, Ningyuan Cao “Towards Uncertainty-aware Robotic Perception via Mixed-signal BNN Engine Leveraging Probabilistic Quantum Tunneling,” _Design Automation Conference (DAC)_, 2025.
