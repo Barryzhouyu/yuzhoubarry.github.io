@@ -3,12 +3,6 @@ layout: default
 title: Yu Zhou
 ---
 
-<p align="right">
-  <a href="/cv" style="padding: 6px 12px; background: #007acc; color: white; text-decoration: none; border-radius: 4px;">
-    📄 View CV
-  </a>
-</p>
-
 <img src="IMG_9336.jpg" width="160" style="float: left; margin-right: 20px; border-radius: 8px;"/>
 
 ## About me
