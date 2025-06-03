@@ -4,7 +4,7 @@ title: Welcome
 ---
 
 ## About me
-
+<img src="images/IMG_9336.jpg" width="200" alt="Yu Zhou">
 My name is **Yu Zhou**, and I am a Ph.D. student in **Electrical Engineering** at the **University of Notre Dame**, advised by [Prof. Mengxue Hou](https://engineering.nd.edu/faculty/mengxue-hou/) in the ND ROAR lab. My research lies at the intersection of **robotics**, **computer vision**, and **uncertainty-aware perception**.
 
 Prior to Notre Dame, I earned my **M.S. in Mechanical Engineering and Materials Science** from **Duke University**, and my **B.S. in Mechanical Engineering** from **Florida Institute of Technology**.
