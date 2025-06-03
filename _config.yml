@@ -1,6 +1,5 @@
 title: Yu Zhou
-remote_theme: jekyll/minima
-
+theme: minima
 header_pages:
   - index.md
   - cv.md
