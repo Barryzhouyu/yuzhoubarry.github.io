@@ -9,9 +9,6 @@ plugins:
   - jekyll-seo-tag
   - jemoji
 
-include:
-  - _includes/header.html
-
 platforms:
   - name: GitHub
     icon: <i class="fa-brands fa-github"></i>
