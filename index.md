@@ -3,7 +3,7 @@ layout: default
 title: Yu Zhou
 ---
 
-<img src="images/profile.jpg" width="160" alt="Yu Zhou" style="float: left; margin-right: 20px; border-radius: 8px;"/>
+<img src="IMG_9336.jpg" width="160" alt="Yu Zhou" style="float: left; margin-right: 20px; border-radius: 8px;"/>
 
 ## About me
 
