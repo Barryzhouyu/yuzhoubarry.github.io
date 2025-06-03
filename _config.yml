@@ -1,5 +1,5 @@
-theme: minima
 title: Yu Zhou
+remote_theme: jekyll/minima
 
 header_pages:
   - index.md
