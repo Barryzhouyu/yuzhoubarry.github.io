@@ -22,6 +22,6 @@ platforms:
 
 navigation:
   - name: CV
-    link: ./cv.md
+    link: ./Yu_s_Resume.pdf
   - name: Photography
     link: ./photography.md
