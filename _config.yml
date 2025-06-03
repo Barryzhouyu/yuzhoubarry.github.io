@@ -22,6 +22,6 @@ platforms:
 
 navigation:
   - name: CV
-    link: /cv.md
+    link: ./cv.md
   - name: Photography
-    link: /photography.md
+    link: ./photography.md
