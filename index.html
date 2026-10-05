@@ -149,6 +149,8 @@
     .robot .name { font-weight: 700; display: block; }
     .robot .what { color: var(--muted); font-size: 14px; }
     @media (max-width: 640px) { .robots { grid-template-columns: 1fr; } }
+    .lbr-heat { margin-top: 4px; aspect-ratio: 480 / 215; overflow: hidden; border-radius: 6px; }
+    .lbr-heat img { width: 100%; height: 100%; object-fit: cover; object-position: bottom; display: block; border-radius: 0; }
   </style>
 </head>
 <body>
@@ -211,8 +213,13 @@
   <!-- IROS 2026 LBR -->
   <div class="pub">
     <div class="pub-media">
-      <img src="lbr26_teaser.webp"
-           alt="Kinova arm at a lab bench with a hot plate and flask (top), and the BayesGS reconstruction of the same bench colored by per-point uncertainty (bottom).">
+      <video autoplay muted loop playsinline preload="auto"
+             aria-label="Kinova arm moving to a flask on a hot plate at a lab bench.">
+        <source src="lbr26_teaser.mp4" type="video/mp4">
+      </video>
+      <div class="lbr-heat">
+        <img src="lbr26_teaser.webp" alt="BayesGS reconstruction of the same bench, colored by per-point uncertainty.">
+      </div>
     </div>
     <div class="pub-body">
       <span class="pub-title">BayesGS: Bayesian Gaussian Splatting for Uncertainty-Aware Real-Time Manipulation</span>
