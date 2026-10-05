@@ -8,31 +8,32 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦾</text></svg>">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root { --text: #1a1a1a; --muted: #5a5a5a; --link: #1772d0; --link-hover: #f09228; --bg: #ffffff; }
+    :root { --text: #1a1a1a; --muted: #5a5a5a; --link: #1772d0; --link-hover: #f09228; --bg: #ffffff; --row: 260px; }
     * { box-sizing: border-box; }
     body { margin: 0; background: var(--bg); color: var(--text);
            font-family: "Lato", Verdana, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; }
     a { color: var(--link); text-decoration: none; }
     a:hover, a:focus { color: var(--link-hover); }
-    .page { max-width: 1000px; margin: 0 auto; padding: 32px 16px 48px; }
+    .page { max-width: 1200px; margin: 0 auto; padding: 32px 16px 48px; }
     h1 { font-size: 32px; font-weight: 400; margin: 8px 0 4px; }
-    .sub { color: var(--muted); margin: 0 0 24px; }
+    h2 { font-size: 22px; font-weight: 400; margin: 36px 0 12px; }
+    .sub { color: var(--muted); margin: 0; }
 
-    /* Hover-to-expand strip */
-    .strip { display: flex; gap: 8px; height: 520px; }
-    .strip figure { flex: 1; min-width: 0; margin: 0; cursor: zoom-in;
-                    border-radius: 10px; overflow: hidden; transition: flex 0.45s ease; }
-    .strip figure:hover, .strip figure:focus { flex: 3; outline: none; }
-    .strip img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    /* Justified rows: every photo in a row has the same height, nothing is cropped */
+    .grid { display: flex; flex-wrap: wrap; gap: 6px; }
+    .grid::after { content: ""; flex-grow: 999999; }
+    .ph { flex-grow: calc(var(--r) * 100); flex-basis: calc(var(--r) * var(--row)); display: block; cursor: zoom-in; }
+    .ph img { display: block; width: 100%; height: auto; aspect-ratio: var(--r); background: #eee; }
 
     /* Lightbox */
-    .lb { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.9); display: none;
+    .lb { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.92); display: none;
           align-items: center; justify-content: center; z-index: 10; cursor: zoom-out; }
     .lb.open { display: flex; }
-    .lb img { max-width: 94vw; max-height: 92vh; border-radius: 6px; }
+    .lb img { max-width: 96vw; max-height: 94vh; }
 
     @media (max-width: 640px) {
-      .strip { height: 380px; }
+      :root { --row: 150px; }
+      .grid { gap: 4px; }
     }
   </style>
 </head>
@@ -40,21 +41,95 @@
 <div class="page">
   <a href="./">&larr; Back to home</a>
   <h1>Photography</h1>
-  <p class="sub">Hover to expand, click to view full size.</p>
+  <p class="sub">Click any photo to see it larger.</p>
 
-  <div class="strip">
-    <figure tabindex="0"><img src="card_dome.webp" alt="Golden Dome at Notre Dame"></figure>
-    <figure tabindex="0"><img src="card_wheel.webp" alt="Ferris wheel on Santa Monica Pier"></figure>
+  <h2>Landscapes</h2>
+  <div class="grid">
+      <a class="ph" href="gallery-full/p01.jpg" style="--r:1.5004"><img src="gallery-web/p01.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p02.jpg" style="--r:2.3283"><img src="gallery-web/p02.jpg" width="2000" height="859" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p03.jpg" style="--r:1.5004"><img src="gallery-web/p03.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p04.jpg" style="--r:1.5004"><img src="gallery-web/p04.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p05.jpg" style="--r:1.5004"><img src="gallery-web/p05.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p06.jpg" style="--r:1.5004"><img src="gallery-web/p06.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p07.jpg" style="--r:1.5004"><img src="gallery-web/p07.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p08.jpg" style="--r:1.5004"><img src="gallery-web/p08.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p09.jpg" style="--r:0.6665"><img src="gallery-web/p09.jpg" width="1333" height="2000" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p10.jpg" style="--r:1.5004"><img src="gallery-web/p10.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p11.jpg" style="--r:1.7762"><img src="gallery-web/p11.jpg" width="2000" height="1126" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p12.jpg" style="--r:0.8455"><img src="gallery-web/p12.jpg" width="1691" height="2000" loading="lazy" decoding="async" alt=""></a>
+  </div>
+
+  <h2>Cities</h2>
+  <div class="grid">
+      <a class="ph" href="gallery-full/p13.jpg" style="--r:1.5004"><img src="gallery-web/p13.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p14.jpg" style="--r:1.5004"><img src="gallery-web/p14.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p15.jpg" style="--r:0.4610"><img src="gallery-web/p15.jpg" width="922" height="2000" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p16.jpg" style="--r:0.5595"><img src="gallery-web/p16.jpg" width="1119" height="2000" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p17.jpg" style="--r:0.6665"><img src="gallery-web/p17.jpg" width="1333" height="2000" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p18.jpg" style="--r:1.0000"><img src="gallery-web/p18.jpg" width="2000" height="2000" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p19.jpg" style="--r:0.5625"><img src="gallery-web/p19.jpg" width="1125" height="2000" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p20.jpg" style="--r:0.6665"><img src="gallery-web/p20.jpg" width="1333" height="2000" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p21.jpg" style="--r:1.6556"><img src="gallery-web/p21.jpg" width="2000" height="1208" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p22.jpg" style="--r:1.5004"><img src="gallery-web/p22.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p23.jpg" style="--r:1.5004"><img src="gallery-web/p23.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p24.jpg" style="--r:1.5004"><img src="gallery-web/p24.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p25.jpg" style="--r:0.6670"><img src="gallery-web/p25.jpg" width="1334" height="2000" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p26.jpg" style="--r:1.5000"><img src="gallery-web/p26.jpg" width="1776" height="1184" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p27.jpg" style="--r:1.5000"><img src="gallery-web/p27.jpg" width="1776" height="1184" loading="lazy" decoding="async" alt=""></a>
+  </div>
+
+  <h2>Street</h2>
+  <div class="grid">
+      <a class="ph" href="gallery-full/p28.jpg" style="--r:1.5004"><img src="gallery-web/p28.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p29.jpg" style="--r:0.6800"><img src="gallery-web/p29.jpg" width="1360" height="2000" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p30.jpg" style="--r:1.0000"><img src="gallery-web/p30.jpg" width="1440" height="1440" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p31.jpg" style="--r:1.5396"><img src="gallery-web/p31.jpg" width="2000" height="1299" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p32.jpg" style="--r:1.5004"><img src="gallery-web/p32.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p33.jpg" style="--r:1.1309"><img src="gallery-web/p33.jpg" width="1339" height="1184" loading="lazy" decoding="async" alt=""></a>
+  </div>
+
+  <h2>Coast</h2>
+  <div class="grid">
+      <a class="ph" href="gallery-full/p34.jpg" style="--r:0.6665"><img src="gallery-web/p34.jpg" width="1333" height="2000" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p35.jpg" style="--r:0.6665"><img src="gallery-web/p35.jpg" width="1333" height="2000" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p36.jpg" style="--r:0.4615"><img src="gallery-web/p36.jpg" width="923" height="2000" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p37.jpg" style="--r:1.5004"><img src="gallery-web/p37.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p38.jpg" style="--r:1.5004"><img src="gallery-web/p38.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p39.jpg" style="--r:0.6665"><img src="gallery-web/p39.jpg" width="1333" height="2000" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p40.jpg" style="--r:0.4605"><img src="gallery-web/p40.jpg" width="921" height="2000" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p41.jpg" style="--r:1.3996"><img src="gallery-web/p41.jpg" width="2000" height="1429" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p42.jpg" style="--r:0.4610"><img src="gallery-web/p42.jpg" width="922" height="2000" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p43.jpg" style="--r:1.5004"><img src="gallery-web/p43.jpg" width="2000" height="1333" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p44.jpg" style="--r:0.6105"><img src="gallery-web/p44.jpg" width="1221" height="2000" loading="lazy" decoding="async" alt=""></a>
+  </div>
+
+  <h2>Everyday</h2>
+  <div class="grid">
+      <a class="ph" href="gallery-full/p45.jpg" style="--r:1.0000"><img src="gallery-web/p45.jpg" width="1182" height="1182" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p46.jpg" style="--r:1.3908"><img src="gallery-web/p46.jpg" width="2000" height="1438" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p47.jpg" style="--r:1.5000"><img src="gallery-web/p47.jpg" width="1776" height="1184" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p48.jpg" style="--r:1.5000"><img src="gallery-web/p48.jpg" width="1776" height="1184" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p49.jpg" style="--r:1.0000"><img src="gallery-web/p49.jpg" width="1184" height="1184" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p50.jpg" style="--r:1.0000"><img src="gallery-web/p50.jpg" width="1182" height="1182" loading="lazy" decoding="async" alt=""></a>
+      <a class="ph" href="gallery-full/p51.jpg" style="--r:1.5000"><img src="gallery-web/p51.jpg" width="1776" height="1184" loading="lazy" decoding="async" alt=""></a>
   </div>
 </div>
 
 <div class="lb" id="lb"><img alt=""></div>
 <script>
   const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
-  const imgs = [...document.querySelectorAll('.strip img')];
+  const links = [...document.querySelectorAll('.ph')];
   let i = 0;
-  const show = k => { i = (k + imgs.length) % imgs.length; lbImg.src = imgs[i].src; lbImg.alt = imgs[i].alt; lb.classList.add('open'); };
-  imgs.forEach((im, k) => im.parentElement.addEventListener('click', () => show(k)));
+  const show = k => {
+    i = (k + links.length) % links.length;
+    const a = links[i];
+    lbImg.src = a.querySelector('img').src;          // instant preview
+    const full = new Image();
+    full.onload = () => { if (links[i] === a) lbImg.src = full.src; };
+    full.src = a.href;                               // swap in the original if it exists
+    lb.classList.add('open');
+  };
+  links.forEach((a, k) => a.addEventListener('click', e => { e.preventDefault(); show(k); }));
   lb.addEventListener('click', () => lb.classList.remove('open'));
   document.addEventListener('keydown', e => {
     if (!lb.classList.contains('open')) return;
