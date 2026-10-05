@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Yu Zhou</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦾</text></svg>">
   <meta name="author" content="Yu Zhou">
   <meta name="description" content="Yu Zhou, Ph.D. student in Electrical Engineering at the University of Notre Dame. Robot manipulation, 3D Gaussian Splatting, uncertainty-aware perception.">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -65,7 +65,17 @@
     .pub-authors { margin-top: 2px; }
     .pub-authors strong { font-weight: 700; }
     .pub-venue { font-style: italic; margin-top: 2px; }
-    .pub-links { margin-top: 4px; }
+    .pub-links { margin-top: 6px; }
+    .pub-links a {
+      display: inline-block; padding: 1px 10px; margin: 0 6px 4px 0;
+      border: 1px solid var(--link); border-radius: 4px; font-size: 13px;
+    }
+    .pub-links a:hover, .pub-links a:focus { background: var(--link); color: #fff; }
+
+    /* News */
+    ul.news { list-style: none; padding: 0; margin: 0; }
+    ul.news li { display: flex; gap: 14px; padding: 3px 0; }
+    ul.news .when { flex: 0 0 68px; }
     .pub-desc { margin: 8px 0 0; color: var(--text); }
 
     /* Simple lists */
@@ -121,6 +131,15 @@
     </div>
     <img class="portrait" src="IMG_3813.JPG" alt="Photo of Yu Zhou">
   </section>
+
+  <!-- ===================== News ===================== -->
+  <h2>News</h2>
+  <ul class="news">
+    <li><span class="when">Sep 2026</span><span>Presented BayesGS as a poster at IROS 2026 Late Breaking Results in Pittsburgh.</span></li>
+    <li><span class="when">Sep 2026</span><span>Submitted a first-author paper on human-in-the-loop VLA manipulation to ICRA 2027.</span></li>
+    <li><span class="when">Sep 2025</span><span>Our paper on uncertainty-aware 3DGS pose estimation for underwater vehicles appeared at OCEANS 2025 Great Lakes.</span></li>
+    <li><span class="when">Jun 2025</span><span>Our paper on a mixed-signal BNN engine for uncertainty-aware robotic perception appeared at DAC 2025.</span></li>
+  </ul>
 
   <!-- ===================== Research ===================== -->
   <h2>Research</h2>
