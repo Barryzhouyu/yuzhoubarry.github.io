@@ -141,6 +141,14 @@
       .intro .photo-teaser { flex-basis: auto; width: 100%; }
       .intro .stack { width: min(300px, 100%); }
     }
+    /* Robots */
+    .robots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 12px; }
+    .robot { margin: 0; border: 1px solid #e3e3e3; border-radius: 10px; overflow: hidden; background: #fff; }
+    .robot img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+    .robot figcaption { padding: 10px 12px 12px; }
+    .robot .name { font-weight: 700; display: block; }
+    .robot .what { color: var(--muted); font-size: 14px; }
+    @media (max-width: 640px) { .robots { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -312,6 +320,24 @@
         performance by 30% over SayPlan and MoMa-LLM.
       </p>
     </div>
+  </div>
+
+  <!-- ===================== Robots ===================== -->
+  <h2>Robots</h2>
+  <p>Platforms I work with hands-on.</p>
+  <div class="robots">
+    <figure class="robot">
+      <img src="robot_rov.webp" alt="BlueROV2 underwater vehicle in the water">
+      <figcaption><span class="name">BlueROV2</span><span class="what">Underwater ROV</span></figcaption>
+    </figure>
+    <figure class="robot">
+      <img src="robot_kinova.webp" alt="Kinova Gen3 arm working in a lab fume hood">
+      <figcaption><span class="name">Kinova Gen3</span><span class="what">Robotic arm for lab manipulation</span></figcaption>
+    </figure>
+    <figure class="robot">
+      <img src="robot_turtlebot.webp" alt="TurtleBot mobile robot">
+      <figcaption><span class="name">TurtleBot</span><span class="what">Mobile robot for navigation</span></figcaption>
+    </figure>
   </div>
 
   <!-- ===================== Teaching & Service ===================== -->
