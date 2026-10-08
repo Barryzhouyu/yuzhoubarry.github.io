@@ -142,7 +142,8 @@
       .intro .stack { width: min(300px, 100%); }
     }
     /* Robots */
-    .robots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 12px; }
+    .robots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 12px; }
+    @media (max-width: 860px) { .robots { grid-template-columns: repeat(2, 1fr); } }
     .robot { margin: 0; border: 1px solid #e3e3e3; border-radius: 10px; overflow: hidden; background: #fff; }
     .robot img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
     .robot figcaption { padding: 10px 12px 12px; }
@@ -342,6 +343,10 @@
     <figure class="robot">
       <img src="robot_turtlebot.webp" alt="TurtleBot mobile robot">
       <figcaption><span class="name">TurtleBot</span><span class="what">Mobile robot for navigation</span></figcaption>
+    </figure>
+    <figure class="robot">
+      <img src="robot_husky.webp" alt="Clearpath Husky A300 ground robot with a 3D LiDAR on top">
+      <figcaption><span class="name">Husky A300</span><span class="what">Ground robot with 3D LiDAR</span></figcaption>
     </figure>
   </div>
 
