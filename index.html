@@ -152,6 +152,30 @@
     @media (max-width: 640px) { .robots { grid-template-columns: 1fr; } }
     .lbr-heat { margin-top: 4px; aspect-ratio: 480 / 215; overflow: hidden; border-radius: 6px; }
     .lbr-heat img { width: 100%; height: 100%; object-fit: cover; object-position: bottom; display: block; border-radius: 0; }
+
+    /* Simulation */
+    .simulators { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 12px; }
+    .simulator { margin: 0; border: 1px solid #e3e3e3; border-radius: 10px; overflow: hidden; }
+    .simulator-media { position: relative; }
+    .simulator-image { display: block; }
+    .simulator-image img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+    .simulator figcaption { padding: 10px 12px 12px; }
+    .simulator h3 { font-size: 16px; margin: 0 0 3px; }
+    .simulator p { color: var(--muted); font-size: 14px; margin: 0; }
+    .simulation-controls {
+      position: absolute; right: 6px; bottom: 6px;
+      display: flex; align-items: center; background: rgba(255, 255, 255, 0.96);
+      border-radius: 6px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    }
+    .simulation-controls[hidden] { display: none; }
+    .simulation-controls button {
+      width: 36px; height: 36px; border: 0; border-radius: 6px;
+      background: transparent; color: var(--text); font: inherit; font-size: 22px; cursor: pointer;
+    }
+    .simulation-controls button:hover { background: #edf4fc; color: var(--link); }
+    .simulation-controls button:focus-visible, .simulator-image:focus-visible { outline: 2px solid var(--link); outline-offset: -3px; }
+    .simulation-count { min-width: 32px; text-align: center; font-size: 12px; }
+    @media (max-width: 640px) { .simulators { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -350,6 +374,55 @@
     </figure>
   </div>
 
+  <!-- ===================== Simulation ===================== -->
+  <section aria-labelledby="simulation">
+    <h2 id="simulation">Simulation</h2>
+    <p class="section-note">Simulation platforms I work with for mobile manipulation and underwater robotics.</p>
+    <div class="simulators">
+      <figure class="simulator">
+        <div class="simulator-media">
+          <a class="simulator-image" href="sim_mujoco.webp" aria-label="View larger MuJoCo screenshot">
+            <img src="sim_mujoco.webp" width="1600" height="900" loading="lazy" decoding="async"
+                 alt="Husky mobile base with a Kinova arm lifting a bottle beside a chair in MuJoCo.">
+          </a>
+        </div>
+        <figcaption>
+          <h3>MuJoCo</h3>
+          <p>Mobile manipulation and object lifting in a custom scene.</p>
+        </figcaption>
+      </figure>
+      <figure class="simulator">
+        <div class="simulator-media">
+          <a class="simulator-image" href="sim_isaac.webp" aria-label="View larger Isaac Sim screenshot">
+            <img src="sim_isaac.webp" width="1600" height="900" loading="lazy" decoding="async"
+                 alt="Husky mobile base with a Kinova arm lifting a bottle in an Isaac Sim laboratory scene.">
+          </a>
+        </div>
+        <figcaption>
+          <h3>Isaac Sim</h3>
+          <p>Husky&ndash;Kinova manipulation in a simulated lab environment.</p>
+        </figcaption>
+      </figure>
+      <figure class="simulator" id="holoocean-gallery">
+        <div class="simulator-media">
+          <a class="simulator-image" href="sim_holoocean_bluerov2.webp" aria-label="View larger HoloOcean screenshot">
+            <img id="holoocean-image" src="sim_holoocean_bluerov2.webp" width="1600" height="900" loading="lazy" decoding="async"
+                 alt="BlueROV2 navigating an underwater kelp scene in HoloOcean OpenWater.">
+          </a>
+          <div class="simulation-controls" role="group" aria-label="HoloOcean screenshots" hidden>
+            <button type="button" data-direction="-1" aria-label="Previous HoloOcean screenshot" aria-controls="holoocean-image">&lsaquo;</button>
+            <span class="simulation-count" role="status" aria-live="polite" aria-atomic="true" aria-label="Screenshot 1 of 4">1 / 4</span>
+            <button type="button" data-direction="1" aria-label="Next HoloOcean screenshot" aria-controls="holoocean-image">&rsaquo;</button>
+          </div>
+        </div>
+        <figcaption>
+          <h3>HoloOcean</h3>
+          <p>Underwater vehicles, environments, and sonar simulation.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
   <!-- ===================== Teaching & Service ===================== -->
   <h2>Teaching</h2>
   <ul class="plain">
@@ -368,5 +441,32 @@
     Layout adapted from <a href="https://jonbarron.info/">Jon Barron's website</a>.
   </footer>
 </div>
+<script>
+  (() => {
+    const gallery = document.getElementById('holoocean-gallery');
+    const image = gallery.querySelector('img');
+    const link = gallery.querySelector('.simulator-image');
+    const controls = gallery.querySelector('.simulation-controls');
+    const count = gallery.querySelector('.simulation-count');
+    const slides = [
+      { src: 'sim_holoocean_bluerov2.webp', alt: 'BlueROV2 navigating an underwater kelp scene in HoloOcean OpenWater.' },
+      { src: 'sim_holoocean_torpedo.webp', alt: 'Torpedo AUV in an underwater kelp scene in HoloOcean OpenWater.' },
+      { src: 'sim_holoocean_sonar.webp', alt: 'An underwater vehicle with green sonar visualization rays in HoloOcean.' },
+      { src: 'sim_holoocean_couguv.webp', alt: 'CougUV underwater vehicle near the pier in HoloOcean PierHarbor.' }
+    ];
+    let current = 0;
+    controls.hidden = false;
+    controls.addEventListener('click', (event) => {
+      const button = event.target.closest('button[data-direction]');
+      if (!button) return;
+      current = (current + Number(button.dataset.direction) + slides.length) % slides.length;
+      image.src = slides[current].src;
+      image.alt = slides[current].alt;
+      link.href = slides[current].src;
+      count.textContent = `${current + 1} / ${slides.length}`;
+      count.setAttribute('aria-label', `Screenshot ${current + 1} of ${slides.length}`);
+    });
+  })();
+</script>
 </body>
 </html>
